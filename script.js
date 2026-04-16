@@ -27,3 +27,10 @@ if (toggle && nav) {
         }
     });
 }
+
+document.querySelectorAll('.card-title').forEach(title => {
+    title.addEventListener('click', () => {
+        const card = title.parentElement;
+        card.classList.toggle('active');
+    });
+});

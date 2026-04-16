@@ -303,8 +303,12 @@ h1 {
     line-height: 1.75;
     color: var(--lttext);
     max-width: 25ch;
+    display: block;
 }
 
+.toggle-icon {
+    display: none;
+}
 /* index how it works */
 .how-section {
     padding: 6.5rem 2rem 7rem;
@@ -1395,6 +1399,42 @@ img.logo-mobile {
         line-height: 1.55;
     }
 
+    .card-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .toggle-icon {
+        display: block;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    /* rotate arrow when open */
+    .connected-card.active .toggle-icon {
+        transform: rotate(-90deg);
+        transition: transform 0.3s ease;
+    }
+
+    /* collapse animation */
+    .card-detail {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .connected-card.active .card-detail {
+        max-height: 200px;
+        margin-top: 8px;
+    }
+
+    .connected-card img {
+        display: none;
+    }
+    
     /* how it works */
     .how-content {
         grid-template-columns: 1fr;
@@ -1509,8 +1549,9 @@ img.logo-mobile {
 
     .ready-text .btn {
         width: fit-content;
-        min-width: 120px;
-        padding: 0.6rem 1rem;
+        min-width: 140px;
+        padding: 0.8rem 1rem;
+        margin: 0 auto;
     }
 
     /*about page*/
@@ -1775,7 +1816,48 @@ img.logo-mobile {
     .signup-empty {
         padding: 6rem 1rem;
     }
-    /*faq page*/
+
+    /* faq page */
+    .faq-page {
+        padding: 2.5rem 1rem 3rem;
+    }
+
+    .faq-hero {
+        margin-bottom: 1.75rem;
+    }
+
+    .faq-hero h1 {
+        font-size: 3rem;
+        line-height: 0.98;
+        margin-bottom: 1rem;
+        max-width: 8ch;
+    }
+
+    .faq-hero p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+    .faq-list {
+        gap: 0.9rem;
+    }
+
+    .faq-item {
+        border-radius: 0.9rem;
+    }
+
+    .faq-item summary {
+        font-size: 1.35rem;
+        line-height: 1.15;
+        padding: 1rem 3.5rem 1rem 1rem;
+    }
+
+    .faq-item p {
+        padding: 0 1rem 1rem;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
 
     /*footer*/
     .main-footer {
