@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check In Club | checkinclub.ca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/full-logo.png" alt="Check In Club logo" class="logo-desktop">
+                <img src="images/just-logo.png" alt="Check In Club logo" class="logo-mobile">
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle_bar"></span>
+            <span class="nav-toggle_bar"></span>
+            <span class="nav-toggle_bar"></span>
+        </button>
+        <nav class="nav-links" id="mobile-nav">
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="signup.html" class=" btn btn-primary">Sign Up</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>Thanks for checking in!</h1>
+
+            <div class="contact-form">
+                <form action="https://formspree.io/f/mkokoeea" method="POST">
+                    <div class="contact-row">
+                        <div class="input-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" name="name" id="name" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" name="email" id="email" placeholder="checkin@club.com" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message *</label>
+                        <textarea name="message" id="message" placeholder="Ask a question, provide a suggestion, or just say hi!"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-contents">
+            <a href="index.html">
+                <img src="images/full-ltlogo.png" alt="Check In Club logo" class="logo-desktop">
+                <img src="images/lettermark-logo.png" alt="Check In Club logo" class="footer-logo logo-mobile">
+            </a>
+            <div class="footer-quick">
+                <div class="footer-links">
+                    <h3>Product</h3>
+                    <a href="index.html">Features</a>
+                    <a href="index.html">How It Works</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>    
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2026 Check In Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

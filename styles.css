@@ -1,0 +1,1911 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    --ltbg: #FAF1EB;
+    --lttext: #140B05;
+    --ltprimary: #293725;
+    --ltsecondary: #C6AF9F;
+    --ltaccent: #604939;
+    --dkbg: #140B05;
+    --dktext: #FAF1EB;
+    --dkprimary: #CCDAC8;
+    --dksecondary: #604939;
+    --dkaccent: #C6AF9F;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inclusive Sans', Arial, Helvetica, sans-serif;
+    background-color: var(--ltbg);
+    color: var(--lttext);
+    font-weight: 350;
+}
+
+/*-- main header and mobile menu --*/
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.nav-toggle_bar {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--ltprimary);
+    border-radius: 999px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* hamburger to X */
+.nav-toggle.active .nav-toggle_bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active .nav-toggle_bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .nav-toggle_bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: 'DM Serif Display', Verdana, Tahoma, sans-serif;
+    font-weight: 330;
+}
+
+/* buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.8rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0.75rem;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--ltprimary);
+    color: var(--ltbg);
+}
+
+.btn-primary:hover {
+    background-color: var(--ltbg);
+    color: var(--ltprimary);
+    border: 1px solid #293725;
+}
+
+.btn-secondary {
+    background-color: var(--ltbg);
+    color: var(--ltprimary);
+    border: 1px solid var(--ltprimary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--ltprimary);
+    color: var(--ltbg);
+}
+/* header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 10.5rem;
+    border-bottom: 1px solid var(--ltsecondary);
+}
+
+.logo img {
+    max-width: 135px;
+    height: auto;
+}
+
+.nav-toggle {
+    display: none;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--ltprimary);
+    cursor: pointer;
+    z-index: 1001;
+
+    /* this is the important part */
+    padding: 0;
+    position: relative;
+}
+
+.nav-toggle_bar {
+    position: absolute;
+    left: 50%;
+    width: 26px;
+    height: 4px;
+    background-color: var(--ltbg);
+    border-radius: 999px;
+    transform: translateX(-50%);
+}
+
+/* place each line manually */
+.nav-toggle_bar:nth-child(1) {
+    top: 12px;
+}
+
+.nav-toggle_bar:nth-child(2) {
+    top: 23px;
+}
+
+.nav-toggle_bar:nth-child(3) {
+    top: 34px;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4.5rem;
+}
+  
+.nav-links a {
+    font-size: 1rem;
+}
+.nav-toggle.active .nav-toggle_bar:nth-child(1) {
+    top: 24px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.nav-toggle.active .nav-toggle_bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .nav-toggle_bar:nth-child(3) {
+    top: 24px;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/*-- index page --*/
+
+/* index hero */
+.hero-section {
+    min-height: calc(100vh - 94px);
+    padding: 6.5rem 10.5rem 5rem;
+}
+
+h1 {
+    font-size: 60px;
+    color: var(--ltprimary)
+}
+
+.hero-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+.hero-content-text {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    max-width: 17ch;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    max-width: 40ch;
+    line-height: 32px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.hero-image img {
+    border-radius: 16px;
+    max-width: 584px;
+    height: auto;
+}
+
+.section-whitebg {
+    background-color: var(--white)
+}
+
+/* index stay connected */
+.connected-section {
+    padding: 7rem 2rem 8rem;
+}
+
+.connected-title {
+    max-width: 780px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+}
+
+.connected-title h2 {
+    font-size: clamp(2.5rem, 1vw, 4.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.02rem;
+    margin-bottom: 1rem;
+}
+
+.connected-title p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.connected-grid {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.connected-card {
+    background-color: var(--ltbg);
+    border-radius: 1.25rem;
+    padding: 1.75rem 1.75rem 2rem;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.connected-card .icon {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+.connected-card h3 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.5rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--lttext);
+    margin-bottom: .5rem;
+}
+
+.connected-card p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--lttext);
+    max-width: 25ch;
+}
+
+/* index how it works */
+.how-section {
+    padding: 6.5rem 2rem 7rem;
+}
+
+.how-title {
+    max-width: 780px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+}
+
+.how-title h2 {
+    font-size: clamp(2.5rem, 1vw, 4.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.02rem;
+    margin-bottom: 1rem;
+}
+
+.how-title p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--lttext);
+}
+
+.how-content {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.how-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.how-step {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.how-step span {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 2.8rem;
+    line-height: 1;
+    color: var(--ltsecondary);
+    display: inline-block;
+    padding-top: 0.3rem;
+}
+
+.how-step-text h3 {
+    font-size: 1.8rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--lttext);
+    margin-bottom: 0.75rem;
+}
+
+.how-step-text p {
+    max-width: 45ch;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--lttext);
+}
+
+.how-image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.how-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1.25rem;
+}
+
+/* index prompts */
+.prompts-section {
+    padding: 6.5rem 2rem 7rem;
+}
+
+.prompts-title {
+    max-width: 780px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+}
+
+.prompts-title h2 {
+    font-size: clamp(2.5rem, 1vw, 4.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.02rem;
+    margin-bottom: 1rem;
+}
+
+.prompts-title p {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--lttext);
+}
+
+.prompts-content {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.prompts-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.prompts-card {
+    background-color: var(--ltbg);
+    border-radius: 1.25rem;
+    padding: 2rem 2rem 2.2rem;
+    min-height: 395px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.prompts-card img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.prompts-card h3 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 2rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--lttext);
+    margin-bottom: 1.5rem;
+}
+
+.prompts-card ul {
+    margin: 0;
+    padding-left: 1.4rem;
+}
+
+.prompts-card li {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--lttext);
+    margin-bottom: 0.6rem;
+}
+
+.prompts-card li:last-child {
+    margin-bottom: 0;
+}
+
+.prompts-plus {
+    max-width: 620px;
+    margin: 4rem auto 0;
+    background-color: #c9cbc7;
+    border-radius: 1.1rem;
+    padding: 1.15rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.prompts-plus h3 {
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--lttext);
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.prompts-plus p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--lttext);
+}
+
+/* index ready */
+.ready-section {
+    padding: 5rem 2rem 6rem;
+}
+
+.ready-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
+
+/* left side */
+.ready-text {
+    padding: 3rem 3.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: linear-gradient(
+        120deg,
+        #1f2f1f 0%,
+        #2e3f2a 40%,
+        #5c4738 100%
+    );
+
+    color: var(--white);
+}
+
+.ready-text h3 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    max-width: 18ch;
+}
+
+.ready-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 36ch;
+    opacity: 0.9;
+}
+
+.ready-text .btn {
+    width: fit-content;
+    padding: 0.8rem 1.4rem;
+}
+
+.ready-text .btn:hover {
+    background-color: var(--ltprimary);
+    border: 1px solid var(--ltbg);
+}
+
+/* right side */
+.ready-image {
+    position: relative;
+}
+
+.ready-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* subtle overlay tint */
+.ready-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to left,
+        rgba(40, 60, 35, 0.4),
+        rgba(40, 60, 35, 0)
+    );
+}
+
+/*-- about page --*/
+.about-hero {
+    padding: 6.5rem 11rem 5rem;
+    max-width: 1550px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.about-hero-text {
+    max-width: 1550px;
+    margin: 0 auto;
+}
+
+.about-hero-text h1 {
+    font-size: 60px;
+    color: var(--ltprimary);
+    max-width: 17ch;
+    margin-bottom: 15px;
+}
+    
+.about-hero-text p {
+    max-width: 100ch;
+    line-height: 30px;
+}
+
+.about-hero-image {
+    display: flex;
+    justify-content: flex-end;
+}
+    
+.about-hero-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1.25rem;
+}
+
+.about-grid {
+    padding: 1.5rem 11rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-girlie {
+    border-radius: 1rem;
+    background-color: var(--ltsecondary);
+    color: var(--lttext);
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+
+}
+
+.about-girlie img {
+    margin: 0 auto;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+.about-girlie h3 {
+    font-size: 1.5rem;
+}
+
+.about-girlie p {
+    line-height: 25px;
+    margin: 20px;
+}
+
+.girlie-icons {
+    padding: 1rem;
+}
+
+.girlie-icons i {
+    font-size: 30px;
+}
+
+.girlie-icons a {
+    margin: 10px;
+}
+
+/*-- sign up page --*/
+.signup-section {
+    padding: 4rem 9.8rem;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-content {
+    max-width: 500px;
+}
+
+.signup-content h1 {
+    margin-bottom: 1.5rem;
+}
+
+.signup-content p {
+    line-height: 28px;
+}
+
+.signup-form {
+    background-color: var(--ltsecondary);
+    padding: 1.2rem;
+    margin: 0 auto;
+    border-radius: 16px;
+    width: 400px;
+}
+
+.signup-form h2 {
+    margin-bottom: 1rem;
+}
+
+.signup-form input{
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: .8rem;
+    border: 1.5px solid var(--lttext);
+    border-radius: 8px;
+    font-family: 'Inclusive Sans', Arial, Helvetica, sans-serif;
+}
+
+.signup-form button {
+    font-family: 'Inclusive Sans', Arial, Helvetica, sans-serif;
+    font-weight: 350;
+}
+
+.signup-message {
+    padding: 3rem 9.5rem 4rem;
+    line-height: 28px;
+    max-width: 1400px;
+}
+
+.signup-message h2 {
+    margin-bottom: 1rem;
+}
+
+.signup-empty {
+    padding: 20rem;
+}
+
+/*-- contact page --*/
+.contact-section {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 5rem 2rem 6rem;
+}
+
+.contact-section h1 {
+    margin-bottom: 2.5rem;
+}
+.contact-form {
+    background-color: var(--white);
+    border-radius: 1.25rem;
+    padding: 3rem 3.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.input-group label {
+    font-family: 'DM Serif Display', Verdana, Tahoma, sans-serif;
+    font-weight: 330;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: var(--lttext);
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    border: 2px solid #1f1a17;
+    border-radius: 0.75rem;
+    background-color: var(--ltbg);
+    color: var(--lttext);
+    font-family: 'Inclusive Sans', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: 1rem 1.1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input {
+    min-height: 64px;
+}
+
+.input-group textarea {
+    min-height: 190px;
+    resize: vertical;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #8d847d;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--ltprimary);
+    box-shadow: 0 0 0 3px rgba(41, 55, 37, 0.12);
+}
+
+.contact-form .btn {
+    width: 100%;
+    min-height: 58px;
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+    justify-content: center;
+    font-family: 'Inclusive Sans', Arial, Helvetica, sans-serif;
+}
+
+.contact-form .btn-primary {
+    background: linear-gradient(to right, #1f2f1f, #284023);
+    color: var(--white);
+    border: none;
+}
+
+.contact-form .btn-primary:hover {
+    background: linear-gradient(to right, #243824, #2d4928);
+    color: var(--white);
+}
+
+/*-- faqs page --*/
+.faq-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem 7rem;
+}
+
+.faq-hero {
+    margin-bottom: 3.5rem;
+}
+
+.faq-hero h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ltprimary);
+    margin-bottom: 1.5rem;
+}
+
+.faq-hero p {
+    max-width: 950px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--lttext);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.faq-item {
+    background-color: #c9b4a3;
+    border-radius: 1rem;
+    padding: 0;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    padding: 1.15rem 4.5rem 1.15rem 1.25rem;
+
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.85rem;
+    line-height: 1.1;
+    color: var(--ltprimary);
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "";
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border-right: 3px solid var(--ltprimary);
+    border-bottom: 3px solid var(--ltprimary);
+    transform: translateY(-65%) rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: translateY(-35%) rotate(225deg);
+}
+
+.faq-item p {
+    padding: 0 1.25rem 1.15rem;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--lttext);
+    max-width: 1000px;
+}
+
+/* optional hover */
+.faq-item summary:hover {
+    opacity: 0.92;
+}
+
+/* footer */
+.main-footer {
+    background-color: var(--ltprimary);
+    padding: 50px 120px 50px;
+}
+
+.footer-contents {
+    display: flex;
+    align-items: flex-start;
+    gap: 140px;
+    margin-bottom: 80px;
+    color: var(--ltbg);
+}
+
+.footer-contents img {
+    width: 180px;
+    max-width: 100%;
+    display: block;
+}
+
+img.logo-desktop {
+    display: block;
+    width: 200px;
+}
+img.logo-mobile {
+    display: none;
+}
+
+.footer-quick {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 100px;
+}
+
+.footer-links h3 {
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+}
+
+.footer-copy {
+    color: var(--ltsecondary);
+    font-size: smaller;
+}
+
+/*-- tablet and smaller --*/
+   @media (min-width: 769px) and (max-width: 1024px) {
+    /* header */
+    .main-header {
+        padding: 1.1rem 3rem;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
+    .nav-links {
+        gap: 2rem;
+    }
+
+    /* hero */
+    .hero-section {
+        padding: 4rem 8rem 3.5rem;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    .hero-content-text {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .hero-text h1 {
+        max-width: 10ch;
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    /* shared section padding */
+    .connected-section,
+    .how-section,
+    .prompts-section,
+    .ready-section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    /* connected */
+    .connected-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .connected-card {
+        min-height: auto;
+    }
+
+    .connected-card p {
+        max-width: 100%;
+    }
+
+    /* how */
+    .how-content {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 2rem;
+    }
+
+    .how-step-text p {
+        max-width: 100%;
+    }
+
+    .how-image img {
+        max-width: 280px;
+    }
+
+    /* prompts */
+    .prompts-list {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .prompts-card {
+        min-height: auto;
+    }
+
+    /* plus bar */
+    .prompts-plus {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    /* ready */
+    .ready-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ready-text {
+        padding: 2rem;
+    }
+
+    .ready-text h3 {
+        font-size: 2.2rem;
+        max-width: 100%;
+    }
+
+    .ready-text p {
+        max-width: 100%;
+    }
+
+    /*about*/
+    .about-hero {
+        padding: 4rem 3rem 3rem;
+        grid-template-columns: 1fr 0.8fr;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .about-hero-text {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .about-hero-text h1 {
+        max-width: 10ch;
+        font-size: 3.5rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+
+    .about-hero-text p {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .about-hero-image img {
+        max-width: 280px;
+    }
+
+    .about-grid {
+        padding: 1rem 3rem 3rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .about-girlie {
+        padding: 1.25rem;
+    }
+
+    .about-girlie img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .about-girlie h3 {
+        font-size: 1.35rem;
+    }
+
+    .about-girlie p {
+        margin: 1rem 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .girlie-icons {
+        padding-top: 0.75rem;
+    }
+
+    .girlie-icons i {
+        font-size: 1.6rem;
+    }
+
+    .girlie-icons a {
+        margin: 0 0.4rem;
+    }
+    /*signup*/
+    .signup-section {
+        padding: 3.5rem 3rem;
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .signup-content {
+        max-width: 100%;
+    }
+
+    .signup-content h1 {
+        font-size: 3.5rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+
+    .signup-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+    .signup-form {
+        width: 100%;
+        max-width: 420px;
+        padding: 1.1rem;
+        border-radius: 1rem;
+    }
+
+    .signup-form h2 {
+        font-size: 1.35rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .signup-form input {
+        margin-bottom: 1.2rem;
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .signup-form .btn {
+        width: 100%;
+        min-height: 3.1rem;
+    }
+
+    .signup-message {
+        padding: 0 3rem 3rem;
+        max-width: 100%;
+    }
+
+    .signup-message h2 {
+        font-size: 1.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .signup-message p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .signup-empty {
+        padding: 8rem 3rem;
+    }
+
+    /* footer */
+    .main-footer {
+        padding: 2.5rem 3rem;
+    }
+
+    .footer-contents {
+        gap: 3rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+    .footer-quick {
+        display: flex;
+        gap: 60px;
+    }
+
+    .footer-links h3 {
+        font-size: 1.5rem;
+    }
+}
+/*mobile*/
+@media (max-width: 768px) {
+    /*menu*/
+    .main-header {
+        position: relative;
+        padding: 1rem 1.5rem;
+        border: none;
+    }
+
+    .logo img {
+        max-width: 80px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem 1.25rem;
+        background-color: var(--ltbg);
+        border-bottom: 1px solid var(--ltsecondary);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.7rem 0;
+    }
+
+    .nav-links .btn {
+        width: 100%;
+    }
+    /*index*/
+    .hero-section {
+        min-height: calc(100vh - 80px);
+        align-items: center;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 0;
+        align-items: start;
+    }
+
+    .hero-content-text {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .hero-text h1 {
+        max-width: 100%;
+        font-size: 3rem;
+        line-height: 0.98;
+        margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.65;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        min-height: 3rem;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    /* shared section padding */
+    .connected-section,
+    .how-section,
+    .prompts-section,
+    .ready-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .connected-title,
+    .how-title,
+    .prompts-title {
+        margin-bottom: 1.5rem;
+    }
+
+    .connected-title h2,
+    .how-title h2,
+    .prompts-title h2 {
+        font-size: 2.1rem;
+        line-height: 1.05;
+    }
+
+    .connected-title p,
+    .how-title p,
+    .prompts-title p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        max-width: 100%;
+    }
+
+    /* connected */
+    .connected-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .connected-card {
+        min-height: auto;
+        padding: 0.85rem 1rem;
+        border-radius: 0;
+        background-color: transparent;
+        border-bottom: 1px solid var(--ltsecondary);
+    }
+
+    .connect-icon {
+        display: none;
+    }
+
+    .connected-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .connected-card p {
+        max-width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+
+    /* how it works */
+    .how-content {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .how-image {
+        display: none;
+    }
+
+    .how-list {
+        gap: 1.5rem;
+    }
+
+    .how-step {
+        grid-template-columns: 42px 1fr;
+        gap: 0.75rem;
+    }
+
+    .how-step span {
+        font-size: 2rem;
+        padding-top: 0.1rem;
+    }
+
+    .how-step-text h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .how-step-text p {
+        max-width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+
+    /* prompts */
+    .prompts-list {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+    }
+
+    .prompts-card {
+        min-height: auto;
+        padding: 1rem;
+        border-radius: 0.9rem;
+    }
+
+    .prompts-card img {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 0.8rem;
+    }
+
+    .prompts-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .prompts-card li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 0.3rem;
+    }
+
+    .prompts-plus {
+        margin-top: 1rem;
+        padding: 0.85rem 1rem;
+        border-radius: 16;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .prompts-plus h3 {
+        font-size: 1.2rem;
+    }
+
+    .prompts-plus p {
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+
+    /* ready */
+    .ready-content {
+        grid-template-columns: 1fr;
+        border-radius: 0.9rem;
+    }
+
+    .ready-image {
+        order: -1;
+    }
+
+    .ready-image img {
+        min-height: 180px;
+    }
+
+    .ready-text {
+        padding: 1.25rem 1rem 1.4rem;
+    }
+
+    .ready-text h3 {
+        font-size: 1.75rem;
+        max-width: 100%;
+        margin-bottom: 0.75rem;
+    }
+
+    .ready-text p {
+        max-width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ready-text .btn {
+        width: fit-content;
+        min-width: 120px;
+        padding: 0.6rem 1rem;
+    }
+
+    /*about page*/
+    .about-hero {
+        padding: 2.5rem 1rem 1.5rem;
+        grid-template-columns: 1fr;
+        gap: 0;
+        align-items: start;
+    }
+    
+    .about-hero-text {
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .about-hero-text h1 {
+        max-width: 100%;
+        font-size: 3rem;
+        line-height: 0.98;
+        margin-bottom: 1rem;
+    }
+    
+    .about-hero-text p {
+        max-width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.65;
+    }
+    
+    .about-hero-image {
+        display: none;
+    }
+    
+    .about-grid {
+        padding: 1rem 1rem 2.5rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .about-girlie {
+        padding: 1.25rem 1rem;
+        border-radius: 0.9rem;
+    }
+    
+    .about-girlie img {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 1rem;
+    }
+    
+    .about-girlie h3 {
+        font-size: 1.35rem;
+    }
+    
+    .about-girlie p {
+        margin: 0.85rem 0;
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+    
+    .about-girlie hr {
+        margin: 0.75rem 0 0;
+    }
+    
+    .girlie-icons {
+        padding: 0.85rem 0 0;
+    }
+    
+    .girlie-icons i {
+        font-size: 1.5rem;
+    }
+    
+    .girlie-icons a {
+        margin: 0 0.45rem;
+    }
+
+    /*sign up*/
+    .signup-section {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+        padding: 2rem 1rem; 
+    }
+
+    .signup-content {
+        max-width: 100%;
+    }
+
+    .signup-content h1 {
+        font-size: 3.5rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+
+    .signup-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+    .signup-form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .signup-form h2 {
+        font-size: 1.35rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .signup-form input {
+        margin-bottom: 1.2rem;
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .signup-form .btn {
+        width: 100%;
+        min-height: 3.1rem;
+    }
+
+    .signup-message {
+        padding: 0 3rem 3rem;
+        max-width: 100%;
+    }
+
+    .signup-message h2 {
+        font-size: 1.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .signup-message p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .signup-empty {
+        padding: 8rem 3rem;
+    }
+
+    /*contact*/
+    .contact-section {
+        padding: 2.5rem 1rem 3rem;
+    }
+    
+    .contact-section h1 {
+        font-size: 3rem;
+        line-height: 1.20;
+        margin-bottom: 1.5rem;
+        max-width: 15ch;
+    }
+    
+    .contact-form {
+        padding: 1rem;
+        border-radius: 1.25rem;
+    }
+    
+    .contact-row {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .contact-form form {
+        gap: 1.25rem;
+    }
+    
+    .input-group {
+        gap: 0.6rem;
+    }
+    
+    .input-group label {
+        font-size: 1.35rem;
+        line-height: 1.1;
+    }
+    
+    .input-group input,
+    .input-group textarea {
+        font-size: 0.95rem;
+        padding: 0.95rem 1rem;
+        border-width: 2px;
+        border-radius: 0.75rem;
+    }
+    
+    .input-group input {
+        min-height: 58px;
+    }
+    
+    .input-group textarea {
+        min-height: 180px;
+    }
+    
+    .contact-form .btn {
+        min-height: 56px;
+        font-size: 1rem;
+        border-radius: 0.75rem;
+    }
+
+    /*signup page*/
+    .signup-section {
+        padding: 2.5rem 1rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .signup-content {
+        max-width: 100%;
+    }
+    
+    .signup-content h1 {
+        font-size: 3rem;
+        line-height: 0.98;
+        margin-bottom: 1rem;
+    }
+    
+    .signup-content p {
+        font-size: 0.9rem;
+        line-height: 1.65;
+        max-width: 100%;
+    }
+    
+    .signup-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    
+    .signup-form h2 {
+        font-size: 1.35rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .signup-form input {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .signup-form .btn {
+        width: 100%;
+        min-height: 3.2rem;
+        font-size: 1rem;
+    }
+    
+    .signup-message {
+        padding: 0 1rem 2.5rem;
+        max-width: 100%;
+    }
+    
+    .signup-message h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .signup-message p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .signup-empty {
+        padding: 6rem 1rem;
+    }
+    /*faq page*/
+
+    /*footer*/
+    .main-footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-contents {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        margin-top: 1.2rem;
+    }
+
+    img.logo-desktop {
+        display: none;
+    }
+
+    img.logo-mobile {
+        display: block;
+        width: 300px;
+    }
+
+    .footer-quick {
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+        width: 100%;
+    }
+
+    .footer-links h3 {
+        font-size: 1.35rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .footer-links {
+        gap: 0.35rem;
+    }
+
+    .footer-links a,
+    .footer-copy {
+        font-size: 0.9rem;
+    }
+    .footer-copy {
+        text-align: center;
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        padding: 1rem 1rem 1.25rem;
+    }
+    .hero-section,
+    .connected-section,
+    .how-section,
+    .prompts-section,
+    .ready-section,
+    .main-footer {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.7rem;
+    }
+
+    .connected-title h2,
+    .how-title h2,
+    .prompts-title h2 {
+        font-size: 1.9rem;
+    }
+
+    .prompts-card,
+    .ready-text {
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+    }
+    .about-hero,
+    .about-grid {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    .about-hero-text h1 {
+        font-size: 2.7rem;
+    }.contact-section {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    .contact-section h1 {
+        font-size: 2.7rem;
+    }
+    
+    .contact-form {
+        padding: 0.9rem;
+    }
+    
+    .input-group label {
+        font-size: 1.2rem;
+    }
+    
+    .input-group textarea {
+        min-height: 160px;
+    }
+    .signup-section,
+    .signup-message,
+    .signup-empty {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .signup-content h1 {
+        font-size: 2.7rem;
+    }
+
+    .signup-form {
+        padding: 0.9rem;
+    }
+
+    .signup-form h2 {
+        font-size: 1.2rem;
+    }
+
+    .signup-empty {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
