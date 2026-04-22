@@ -31,7 +31,7 @@
         <nav class="nav-links" id="mobile-nav">
             <a href="/contact">Contact</a>
             <a href="/about">About</a>
-            <a href="/signup" class=" btn btn-primary">Sign Up</a>
+            <a href="/signup" class=" btn btn-primary active">Sign Up</a>
         </nav>
     </header>
 
@@ -55,9 +55,26 @@
             <p>We may not be live yet, but we know exactly where we're headed. Below, you'll find screenshots and walkthroughs of the Check In Club experience as we've designed it — a glimpse into the platform we're working hard to bring to life. The vision is clear, the work is real, and the best is still to come.</p>
         </section>
 
-        <section class="signup-empty">
-
+        <section class="mockup-gallery">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/CreateGroupMock.jpg" alt="Create group screen mockup" onclick="openModal(this)">
+                </div>
+        
+                <div class="gallery-item">
+                    <img src="images/GroupDashMock.jpg" alt="Group dashboard mockup" onclick="openModal(this)">
+                </div>
+        
+                <div class="gallery-item">
+                    <img src="images/PromptLibraryMock.jpg" alt="Prompt library mockup" onclick="openModal(this)">
+                </div>
+        
+                <div class="gallery-item">
+                    <img src="images/RobustDashMock.jpg" alt="Dashboard features mockup" onclick="openModal(this)">
+                </div>
+            </div>
         </section>
+
     </main>
 
     <footer class="main-footer">
@@ -86,5 +103,11 @@
     </footer>
     
     <script src="script.js"></script>
+
+    <div class="image-modal" id="imageModal">
+        <span class="image-modal-close" onclick="closeModal()">&times;</span>
+        <img class="image-modal-content" id="modalImg" alt="">
+    </div>
+
 </body>
 </html>

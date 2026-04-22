@@ -34,3 +34,23 @@ document.querySelectorAll('.card-title').forEach(title => {
         card.classList.toggle('active');
     });
 });
+
+function openModal(img) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
+window.addEventListener("click", function (e) {
+    const modal = document.getElementById("imageModal");
+    if (e.target === modal) {
+        closeModal();
+    }
+});
